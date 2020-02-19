@@ -2,7 +2,7 @@ Process PDF files without using external tools, like web services or strange sof
 
 The code of this tool is all here, and since it's a CLI it is really minimal and fast.
 
-The library to deal with PDF files is PyPDF2, that is freely available as well.
+The library to deal with PDF files is [PyPDF2](https://pythonhosted.org/PyPDF2/), that is freely available as well.
 For the future, a GUI is work in progress.
 
 ```
