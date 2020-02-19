@@ -17,3 +17,11 @@ optional arguments:
   -e EXTRACT, --extract EXTRACT
                         Path to pdf file, and page subset, that have to be extracted.
 ```
+
+
+Usage example:
+```
+$ python pdf.py -d ./my_destination.pdf -m ./file1.pdf ./file2.pdf[6-15] ./file3.pdf[3,5-7]
+```
+
+will merge (-m) together file1.pdf with pages 6 to 15 of file2.pdf and pages 3 and 5 to 7 of file3.pdf
