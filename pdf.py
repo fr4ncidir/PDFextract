@@ -62,7 +62,7 @@ def merge(file_path_list):
 def main(args):
     global pdf_writer
     pdf_writer = PdfFileWriter()
-    if not args["merge"] is None:
+    if args["merge"]:
         merge(args["merge"])
     else:
         extract(args["extract"])
@@ -80,4 +80,4 @@ if __name__ == "__main__":
     group.add_argument("-m", "--merge", nargs="+", help="List of paths to pdf files to merge together (plus additional page subset) in the provided order;")
     group.add_argument("-e", "--extract", help="Path to pdf file, and page subset, that have to be extracted.")
 
-    main(vars(parser.parse_args()))
+    main(vars(parser.parse_args())) 

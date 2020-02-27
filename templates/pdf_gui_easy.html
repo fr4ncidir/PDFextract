@@ -1,0 +1,36 @@
+<!--
+ @author Francesco Antoniazzi <francesco.antoniazzi1991@gmail.com>
+ @file Description
+ @desc Created on 2020-02-26 10:29:22 am
+ @copyright APPI SASU
+ -->
+<!DOCTYPE html>
+<html>
+<header><title>PDF Extract and Merge</title></header>
+<body>
+
+<h1>PDF Extract and Merge</h1>
+
+<form id="execbutton" action="/execute">
+    <input type="submit" value="Execute" id="execute" />
+</form>
+<br>
+<br>
+<form id="uploadbanner" enctype="multipart/form-data" method="post" action="/file_upload">
+    <input id="fileupload" name="myfile" type="file" />
+    <input id="range" name="pagerange" type="text" value="[]"/>
+    <input type="submit" value="submit" id="submit" />
+</form>
+
+<ul id="dynamic-list">
+    {% for file_item in file_list: %}
+    <li>{{ file_item[0] }} : {{ file_item[1] }}
+    <form id="removeFile" action="/remove/{{ file_item[0] }}" method="post">
+    <input type="submit" value="Remove File" id="removeFile" />
+    </form>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
