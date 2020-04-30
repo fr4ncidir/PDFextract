@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/env python3
 # 
 # This is an easy Python3 tool to manage pdf files.
 # Sometimes, when you install these kind of software, you give the right
