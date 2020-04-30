@@ -6,16 +6,35 @@ The library to deal with PDF files is [PyPDF2](https://pythonhosted.org/PyPDF2/)
 For the future, a GUI is work in progress.
 
 ```
-usage: pdf.py [-h] [-d DESTINATION] (-m MERGE [MERGE ...] | -e EXTRACT)
+python pdf.py -h
+usage: pdf.py [-h] [-d OUTPUTFILE] [--version] [-l [LOGFILE] | -ll [LOGFILE] |
+              -lll [LOGFILE] | -llll [LOGFILE]]
+              (-m file[page subset] [file[page subset] ...] | -e file[page subset] | -w FILE WATERMARKFILE)
+
+Process PDF files
 
 optional arguments:
   -h, --help            show this help message and exit
-  -d DESTINATION, --destination DESTINATION
+  -d OUTPUTFILE, --destination OUTPUTFILE
                         This is the path to processing output file;
-  -m MERGE [MERGE ...], --merge MERGE [MERGE ...]
-                        List of paths to pdf files to merge together (plus additional page subset) in the provided order;
-  -e EXTRACT, --extract EXTRACT
-                        Path to pdf file, and page subset, that have to be extracted.
+  --version             show program's version number and exit
+  -l [LOGFILE], --errorLog [LOGFILE]
+                        Set log level to ERROR + optional log file path
+  -ll [LOGFILE], --warningLog [LOGFILE]
+                        Set log level to WARNING + optional log file path
+  -lll [LOGFILE], --infoLog [LOGFILE]
+                        Set log level to INFO + optional log file path
+  -llll [LOGFILE], --debugLog [LOGFILE]
+                        Set log level to DEBUG + optional log file path
+  -m file[page subset] [file[page subset] ...], --merge file[page subset] [file[page subset] ...]
+                        List of paths to pdf files to merge together (plus
+                        additional page subset) in the provided order;
+  -e file[page subset], --extract file[page subset]
+                        Path to pdf file, and page subset, that have to be
+                        extracted.
+  -w FILE WATERMARKFILE, --watermark FILE WATERMARKFILE
+                        Watermark your pdf file. A watermark file has to be
+                        created before!
 ```
 
 
