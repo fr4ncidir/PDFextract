@@ -93,7 +93,9 @@ def extract(file_path):
 def merge(file_path_list):
     for item in file_path_list:
         logging.info("Merging file {}".format(item))
-        extract(item)
+        if not extract(item):
+            return False
+    return True
         
 def watermark(args):
     global pdf_writer
