@@ -19,6 +19,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from setuptools import setup, find_packages
+
 setup(
     name="PdfExtract",
     version="1.0",
@@ -38,5 +39,14 @@ setup(
         "Bug Tracker": "https://github.com/fr4ncidir/PDFextract/issues",
         "Documentation": "https://github.com/fr4ncidir/PDFextract/blob/master/README.md",
         "Source Code": "https://github.com/fr4ncidir/PDFextract",
-    }
+    },
+    classifiers=[
+        "Topic :: Utilities",
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+        "Intended Audience :: End Users/Desktop",
+        "Environment :: Console",
+        "Development Status :: 5 - Production/Stable"
+    ]
 )
